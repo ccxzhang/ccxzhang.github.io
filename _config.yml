@@ -1,0 +1,17 @@
+theme: jekyll-theme-minimal
+title: Charlie Zhang
+logo:
+
+author:
+  name: Charlie Zhang
+
+description:
+  MS-DSPP 22' @ Georgetown <br />
+  cz317 [at] georgetown.edu
+
+home: true
+blog: true
+
+github:
+  is_project_page: true
+  is_user_page: false
