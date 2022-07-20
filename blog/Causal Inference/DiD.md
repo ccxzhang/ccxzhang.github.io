@@ -1,10 +1,16 @@
-# Difference in Difference
-#quasi-experimental #panel
+---
+title: Difference in Difference
+author: Charlie Zhang
+tags:
+  - Causal Inference
+layout: post
+---
+
 
 Assumptions:
-1. #sutva[[Robustness Checks]] Robustness Checks
-2. #strict_exogeneity [[Robustness Checks]] 
-3. #parallel_trends [[Parallel trends assumption]] Parallel trends assumption
+1. SUTVA
+2. Strict Exogeneity
+3. Parallel trends assumption
 4. No anticipatory effects 
 
 Difference in Difference combines:
