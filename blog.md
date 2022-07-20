@@ -1,6 +1,11 @@
-### Blog
+### Tutorial
 
 [Tutorial on Selenium](blog/selenium_slides.html)
+
+
+### Notes on Causal Inference
+
+[Difference in Difference](blog/Causal%20Inference/DiD.md)
 
 ### Data Visualization
 
