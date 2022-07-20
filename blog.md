@@ -5,7 +5,7 @@
 
 ### Notes on Causal Inference
 
-[Difference in Difference](blog/Causal%20Inference/DiD.md)
+[Difference in Difference](blog/CausalInference/DiD.html)
 
 ### Data Visualization
 
