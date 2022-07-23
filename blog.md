@@ -5,7 +5,8 @@
 
 ### Notes on Causal Inference
 
-[Difference in Difference](blog/CausalInference/DiD.html)
+[Differences-in-Differences](blog/CausalInference/DiD.html)
+[Regression Discontinuity Designs](#)
 
 ### Data Visualization
 

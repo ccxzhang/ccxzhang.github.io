@@ -24,7 +24,7 @@
       </header>
       <section>
       <small></small>
-<h1>Difference in Difference</h1>
+<h1>Differences-in-Differences</h1>
 
 <p class="view">by Charlie Zhang</p>
 
@@ -36,22 +36,31 @@
   <li>No anticipatory effects</li>
 </ol>
 
-<p>Difference in Difference combines:
-<strong>cross-sectional treatment-control comparisons</strong> and <strong>before-after</strong> studies (MHE, ): 
-\(y_{ist}= \gamma_{s} + \lambda_{t} + \beta D_{st} + \epsilon_{ist}\)</p>
+<p>Differences-in-Differences combines:
+<strong>cross-sectional treatment-control comparisons</strong> and <strong>before-after</strong> studies: 
+$$ y_{ist}= \gamma_{s} + \lambda_{t} + \beta D_{st} + \epsilon_{ist} $$ 
 
-<p>where $\lambda_t$ is before/after fixted effects and $E(\epsilon_{ist} \mid s,t) = 0$ and we get:
-\(\Delta_{treatment} = E[y_{ist} \mid s = treatment, t = after] - E[y_{ist} \mid s = treatment, t = before] = \lambda_{after} - \lambda_{before} + \beta\)
-\(\Delta_{control} = E[y_{ist} \mid s = control, t = after] - E[y_{ist} \mid s = control, t = before] = \lambda_{after} - \lambda_{before}\)</p>
+<p>where \(\lambda_t\) is before/after fixted effects and \(E(\epsilon_{ist} \mid s,t) = 0\) and we get:
+    $$ 
+    \begin{align*}
+        \Delta_{treatment} & = E[y_{ist} \mid s = treatment, t = after] - E[y_{ist} \mid s = treatment, t = before] \\ 
+        & =  \lambda_{after} - \lambda_{before} + \beta \\
+    
+        \Delta_{control} &= E[y_{ist} \mid s = control, t = after] - E[y_{ist} \mid s = control, t = before] 
+        \\ & = \lambda_{after} - \lambda_{before}\
+    \end{align*}
+    $$
 
-<p>and we have:
-\(DiD = \hat{\beta} = \Delta_{treatment} - \Delta_{control}\)</p>
+</p> 
+<p>then we have:
+$$DiD = \hat{\beta} = \Delta_{treatment} - \Delta_{control}$$
+</p>
 
-<p>Further considerations (<a href="https://www.scielo.br/j/rmj/a/KhRXgcqvzFcRFmtfZB5zF7b/?lang=en&amp;format=html">Fredriksson and Oliveira</a>, 2019):</p>
+<p>Further considerations (<a href="https://www.scielo.br/j/rmj/a/KhRXgcqvzFcRFmtfZB5zF7b/?lang=en&amp;format=html">Fredriksson and Oliveira, 2019)</a>:</p>
 <ol>
   <li><strong>Using control variables for a more robust identiﬁcation</strong>
     <ul>
-      <li>“The main reason for including also individual level controls ($X_{ist}$) is instead to decrease the variance of the regression coefﬁcient estimates”</li>
+      <li>“The main reason for including also individual level controls \(X_{ist}\) is instead to decrease the variance of the regression coefﬁcient estimates”</li>
     </ul>
   </li>
   <li><strong>Standard Errors</strong>
@@ -61,7 +70,7 @@
     <ul>
       <li>DD estimation usually relies on fairly long time series with an average of 16.5 periods in the surveyed papers;</li>
       <li>“The most commonly used dependent variables in DD estimation are typically highly positively serially correlated;”</li>
-      <li>“An intrinsic aspect of the DD model, the treatment variable $I_{st}$ changes itself very little within a state over time”
+      <li>“An intrinsic aspect of the DD model, the treatment variable \(I_{st}\) changes itself very little within a state over time”
     -</li>
     </ul>
   </li>
@@ -72,9 +81,9 @@
       <li>Empirically, one way is to estimate covariate balance regressions</li>
     </ul>
     <ul>
-      <li>Covariate $C_{gt}$ associated with group $g$ in period $t$, and a simple way to “test for problematic composition changes is to replace the outcome variable with the covariate and ﬁt the standard DID regression model”</li>
-      <li>Mathematically: $C_{gt}= a_g+ b_t+ D_{gt}\delta^{‘}+ \varepsilon_{gt}$;</li>
-      <li>Under the null hypothesis there there are no compositional changes, we expect $\delta^{‘} = 0$, and it is sensible to consider the magnitude of the change in composition rather than the pure statistical signiﬁcance of the coefﬁcient estimate;</li>
+      <li>Covariate \(C_{gt}\) associated with group \(g\) in period \(t\), and a simple way to “test for problematic composition changes is to replace the outcome variable with the covariate and ﬁt the standard DID regression model”</li>
+      <li>Mathematically: \(C_{gt}= a_g+ b_t+ D_{gt}\delta^{'}+ \varepsilon_{gt}\);</li>
+      <li>Under the null hypothesis there there are no compositional changes, we expect \(\delta^{'} = 0\), and it is sensible to consider the magnitude of the change in composition rather than the pure statistical signiﬁcance of the coefﬁcient estimate;</li>
     </ul>
   </li>
 </ol>
