@@ -2,11 +2,11 @@
 
 [Tutorial on Selenium](blog/selenium_slides.html)
 
-
-### Notes on Causal Inference
+### Notes
 
 [Differences-in-Differences](blog/CausalInference/DiD.html)
-[Regression Discontinuity Designs](#)
+
+[Regression Discontinuity Designs](blog/CausalInference/RDDs.html)
 
 ### Data Visualization
 
@@ -18,4 +18,4 @@
 
 ### Projects
 
-[Time Series Analysis (ongoing)](https://charliezhang.georgetown.domains/ts.html)
+[Time Series Analysis](https://charliezhang.georgetown.domains/ts.html)
