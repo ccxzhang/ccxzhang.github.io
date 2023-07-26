@@ -1,25 +1,28 @@
-### Tutorial
+## Tutorial
 
 [Tutorial on Selenium](blog/selenium_slides.html)
 
-### Notes
+## Notes
 
 [Differences-in-Differences](blog/CausalInference/DiD.html)
 
 [Regression Discontinuity Designs](blog/CausalInference/RDDs.html)
 
-### Data Visualization
+## Data Visualization
+
 [Understanding China's Ideological Landscape - A Mixed Approach](https://ccxzhang.github.io/4dataviz/)
 
 ## GeoSpatial Analysis
-[GeoSpatial Analysis](https://github.com/ccxzhang/GeoSpatialAnalysis)
+
+[GeoSpatial Analysis](blog/geospatial)
 
 [Tutorial on GeoSpatial Visualization (Cartopy and Folium)](https://nbviewer.org/github/ccxzhang/GeoSpatialViz/blob/7e3edc747fb70677b23a31194cbf64a731bb099c/GeoSpatialTutorial.ipynb)
-  - [2021 DC Theft Map](https://dc-theft-map.herokuapp.com/)
-  - [Other examples](blog/map_examples.md)
 
+- [2021 DC Theft Map](https://dc-theft-map.herokuapp.com/)
+- [Other examples](blog/map_examples.md)
 
-
-### Projects
+## Projects
 
 [Time Series Analysis](https://charliezhang.georgetown.domains/ts.html)
+
+[Replication for The Impact of High School Financial Education: Evidence from a Large-Scale Evaluation in Brazil](blog/replication)
