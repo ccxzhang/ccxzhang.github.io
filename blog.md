@@ -12,9 +12,11 @@
 
 [Understanding China's Ideological Landscape - A Mixed Approach](https://ccxzhang.github.io/4dataviz/)
 
+[D3.js Visualizations](https://charliezhang.net/d3viz)
+
 ## GeoSpatial Analysis
 
-[GeoSpatial Analysis](blog/geospatial)
+[GeoSpatial Analysis](https://charliezhang.net/GeoSpatialAnalysis)
 
 [Tutorial on GeoSpatial Visualization (Cartopy and Folium)](https://nbviewer.org/github/ccxzhang/GeoSpatialViz/blob/7e3edc747fb70677b23a31194cbf64a731bb099c/GeoSpatialTutorial.ipynb)
 
