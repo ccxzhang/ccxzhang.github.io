@@ -153,22 +153,38 @@ h5 {
 }
 
 .page-intro {
-  margin-bottom: 38px;
-  padding-bottom: 22px;
+  margin-bottom: 30px;
+  padding-bottom: 16px;
   border-bottom: 1px solid var(--line);
 }
 
 .page-intro h2 {
-  font-size: clamp(2.6rem, 5vw, 4.6rem);
-  max-width: 12ch;
-  margin-bottom: 0.7rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  max-width: none;
+  margin-bottom: 0.45rem;
+  line-height: 1.02;
+}
+
+.page-description {
+  max-width: none;
+  font-size: 0.98rem;
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 28px;
-  margin-bottom: 40px;
+  margin-top: 24px;
+  margin-bottom: 28px;
+}
+
+.education-panel {
+  margin-top: 12px;
+  padding-bottom: 12px;
+}
+
+.skills-section {
+  margin-top: 36px;
 }
 
 .info-card,
@@ -189,9 +205,42 @@ h5 {
   border-bottom: 1px solid var(--line);
 }
 
+.info-card {
+  display: grid;
+  grid-template-columns: minmax(120px, 180px) minmax(0, 1fr);
+  column-gap: 28px;
+  align-items: start;
+}
+
+.info-card h3 {
+  margin: 0;
+}
+
+.info-card-list {
+  display: grid;
+  gap: 14px;
+}
+
+.info-card-list p {
+  display: grid;
+  grid-template-columns: minmax(140px, 180px) minmax(0, 1fr);
+  gap: 16px;
+  margin: 0;
+}
+
+.info-card-list strong {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+}
+
+.info-card-list span {
+  color: var(--muted);
+}
+
 .stack {
   display: grid;
-  gap: 24px;
+  gap: 20px;
 }
 
 .section-header {
@@ -243,6 +292,13 @@ h5 {
   color: var(--muted);
   font-family: var(--font-body);
   font-style: italic;
+}
+
+.timeline-detail {
+  margin-bottom: 0;
+  padding-left: 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .timeline-meta {
@@ -399,6 +455,16 @@ code {
     gap: 20px;
   }
 
+  .info-card {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+
+  .info-card-list p {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
   .timeline-company-row,
   .timeline-role-row {
     align-items: flex-start;
@@ -407,6 +473,10 @@ code {
   }
 
   .timeline-role {
+    padding-left: 0;
+  }
+
+  .timeline-detail {
     padding-left: 0;
   }
 

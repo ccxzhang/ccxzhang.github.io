@@ -11,7 +11,7 @@ export const experienceGroups = [
             title: "Junior Professional Associate in East Asia & Pacific (EAP) Water",
             dates: "November 2024 - Current",
             bullets: [
-              "Prepared water supply and sanitation lending investments ($700 million), including drafting Project Appraisal Documents, refining theory of change and results framework, drafting trust fund applications, and coordinating inputs across operational staff to ensure compliance with procedures.",
+              "Prepared water supply and sanitation lending investments, including drafting Project Appraisal Documents, refining theory of change and results framework, drafting trust fund applications, and coordinating inputs across operational staff to ensure compliance with procedures.",
               "Conducted economic cost-benefit analysis (EIRR) for the Mongolia Flood Protection Project, estimating water treatment costs, avoided flood damages, and O&M savings to strengthen the investment case.",
               "Analyzed water and sanitation coverage in Fiji and Papua New Guinea using survey data and authored a water-tourism nexus study for the Fiji Climate Change & Development Report.",
               "Supported policy advisory work in China, identifying sectoral challenges and contributing to a water resources management framework balancing growth, environmental sustainability, and consumption needs.",

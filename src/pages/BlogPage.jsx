@@ -15,7 +15,6 @@ export function BlogPage() {
       <PageIntro
         eyebrow="Blog"
         title="Notes, tutorials, and project links."
-        description="A curated index of tutorials, causal inference notes, visualization work, and reproducibility projects."
       />
       <div className="stack">
         {blogSections.map((section) => (
