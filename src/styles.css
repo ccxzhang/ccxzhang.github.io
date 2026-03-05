@@ -1,16 +1,19 @@
 :root {
   color-scheme: light;
-  --bg: #f3efe5;
-  --panel: rgba(255, 252, 245, 0.88);
-  --panel-strong: #fffaf0;
-  --ink: #1c1712;
-  --muted: #62574c;
-  --line: rgba(28, 23, 18, 0.12);
-  --accent: #0f766e;
-  --accent-strong: #134e4a;
-  --shadow: 0 28px 60px rgba(47, 38, 29, 0.12);
-  --radius: 24px;
-  --content-width: 1180px;
+  --bg: #fcfbf7;
+  --panel: #ffffff;
+  --panel-strong: #ffffff;
+  --ink: #171717;
+  --muted: #666158;
+  --line: #ddd7cc;
+  --accent: #1f5c52;
+  --accent-strong: #123f38;
+  --radius: 0;
+  --content-width: 1120px;
+  --font-body: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-display: "Baskerville", "Times New Roman", serif;
+  --font-ui: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+  --font-meta: "SFMono-Regular", "Menlo", "Monaco", monospace;
 }
 
 * {
@@ -18,22 +21,20 @@
 }
 
 html {
-  background:
-    radial-gradient(circle at top left, rgba(15, 118, 110, 0.14), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(180, 83, 9, 0.12), transparent 24%),
-    var(--bg);
+  background: var(--bg);
 }
 
 body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
-  font: 400 16px/1.7 "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font: 400 16px/1.72 var(--font-body);
 }
 
 a {
   color: var(--accent-strong);
-  text-decoration: none;
+  text-decoration-color: rgba(18, 63, 56, 0.25);
+  text-underline-offset: 0.18em;
 }
 
 a:hover {
@@ -56,41 +57,64 @@ h5 {
   font-weight: 600;
 }
 
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+h3,
+h4 {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+h5 {
+  font-family: var(--font-meta);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 .site-shell {
   width: min(calc(100% - 32px), var(--content-width));
-  margin: 24px auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
-  gap: 28px;
+  gap: 56px;
   align-items: start;
+  padding: 36px 0 56px;
 }
 
 .site-sidebar,
 .site-main {
   background: var(--panel);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--line);
+  border: 0;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: none;
 }
 
 .site-sidebar {
   position: sticky;
-  top: 24px;
-  padding: 28px;
+  top: 32px;
+  padding: 8px 0 0;
 }
 
 .brand-kicker,
 .page-eyebrow {
   margin-bottom: 0.75rem;
-  font: 700 0.78rem/1.1 "Avenir Next", "Segoe UI", sans-serif;
-  letter-spacing: 0.16em;
+  font: 700 0.74rem/1.1 var(--font-meta);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
 }
 
 .brand-title {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-size: clamp(2.6rem, 4vw, 3.75rem);
+  margin-bottom: 0.6rem;
 }
 
 .brand-copy,
@@ -100,48 +124,51 @@ h5 {
 
 .site-nav {
   display: grid;
-  gap: 10px;
-  margin: 30px 0;
+  gap: 8px;
+  margin: 28px 0 32px;
 }
 
 .site-nav a,
 .home-link {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  padding: 0 18px;
-  border-radius: 999px;
-  border: 1px solid rgba(15, 118, 110, 0.25);
-  background: rgba(15, 118, 110, 0.08);
-  font: 600 0.95rem/1 "Avenir Next", "Segoe UI", sans-serif;
+  min-height: 36px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: 600 0.92rem/1.2 var(--font-ui);
 }
 
 .site-footer {
-  display: flex;
-  gap: 16px;
+  display: grid;
+  gap: 4px;
   flex-wrap: wrap;
   color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: 0.92rem;
 }
 
 .site-main {
-  padding: 32px;
+  padding: 4px 0 0;
 }
 
 .page-intro {
-  margin-bottom: 28px;
+  margin-bottom: 38px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
 }
 
 .page-intro h2 {
-  font-size: clamp(2rem, 5vw, 4.2rem);
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
   max-width: 12ch;
+  margin-bottom: 0.7rem;
 }
 
 .card-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  margin-bottom: 20px;
+  gap: 28px;
+  margin-bottom: 40px;
 }
 
 .info-card,
@@ -150,7 +177,7 @@ h5 {
 .post,
 .embed-shell {
   background: var(--panel-strong);
-  border: 1px solid var(--line);
+  border: 0;
   border-radius: calc(var(--radius) - 6px);
 }
 
@@ -158,12 +185,13 @@ h5 {
 .timeline-card,
 .list-card,
 .post {
-  padding: 22px;
+  padding: 0 0 18px;
+  border-bottom: 1px solid var(--line);
 }
 
 .stack {
   display: grid;
-  gap: 18px;
+  gap: 24px;
 }
 
 .section-header {
@@ -176,10 +204,11 @@ h5 {
 .timeline-list {
   display: grid;
   gap: 18px;
+  padding-top: 12px;
 }
 
 .timeline-item {
-  padding-top: 14px;
+  padding-top: 16px;
   border-top: 1px solid var(--line);
 }
 
@@ -189,7 +218,38 @@ h5 {
 }
 
 .timeline-item h5 {
-  font-size: 1.05rem;
+  margin-bottom: 0.9rem;
+}
+
+.timeline-company-row,
+.timeline-role-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.timeline-company {
+  margin-bottom: 0.25rem;
+}
+
+.timeline-role-block + .timeline-role-block {
+  margin-top: 1rem;
+}
+
+.timeline-role {
+  margin-bottom: 0.7rem;
+  padding-left: 1.5rem;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-style: italic;
+}
+
+.timeline-meta {
+  margin-bottom: 0.7rem;
+  color: var(--muted);
+  font: 0.8rem/1.4 var(--font-meta);
+  white-space: nowrap;
 }
 
 .link-list,
@@ -205,6 +265,10 @@ h5 {
   margin-top: 0.5rem;
 }
 
+.timeline-role-block ul {
+  margin-bottom: 0;
+}
+
 .post-body > * + * {
   margin-top: 0.2rem;
 }
@@ -217,11 +281,13 @@ h5 {
 }
 
 .tag-row span {
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(19, 78, 74, 0.08);
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
   color: var(--accent-strong);
-  font: 600 0.88rem/1 "Avenir Next", "Segoe UI", sans-serif;
+  font: 700 0.74rem/1.2 var(--font-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .embed-shell {
@@ -229,6 +295,7 @@ h5 {
   overflow: hidden;
   padding-top: var(--embed-ratio);
   margin: 16px 0 24px;
+  border: 1px solid var(--line);
 }
 
 .embed-shell iframe {
@@ -241,14 +308,59 @@ h5 {
 
 code {
   padding: 0.1rem 0.35rem;
-  border-radius: 6px;
-  background: rgba(28, 23, 18, 0.06);
+  border-radius: 0;
+  background: rgba(23, 23, 23, 0.05);
   font-size: 0.92em;
+}
+
+.timeline-panel {
+  padding-bottom: 0;
+}
+
+.timeline-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;
+  gap: 12px;
+}
+
+.timeline-summary::-webkit-details-marker {
+  display: none;
+}
+
+.timeline-summary::after {
+  content: "+";
+  color: var(--muted);
+  font: 400 1.4rem/1 var(--font-display);
+}
+
+.timeline-panel[open] .timeline-summary::after {
+  content: "-";
+}
+
+.timeline-summary h4 {
+  margin-bottom: 0;
+}
+
+.info-card h3,
+.list-card h3,
+.post h3,
+.timeline-card h4 {
+  margin-bottom: 0.8rem;
+}
+
+.post-body h3 {
+  margin-top: 2rem;
 }
 
 @media (max-width: 960px) {
   .site-shell {
     grid-template-columns: 1fr;
+    gap: 24px;
+    width: min(calc(100% - 32px), var(--content-width));
+    padding-top: 20px;
   }
 
   .site-sidebar {
@@ -267,18 +379,38 @@ code {
 @media (max-width: 640px) {
   .site-shell {
     width: min(calc(100% - 20px), var(--content-width));
-    margin: 10px auto;
-    gap: 14px;
+    gap: 18px;
+    padding-bottom: 32px;
   }
 
   .site-sidebar,
   .site-main {
-    padding: 20px;
-    border-radius: 20px;
+    padding: 0;
+    border-radius: 0;
   }
 
   .section-header {
     align-items: start;
     flex-direction: column;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .timeline-company-row,
+  .timeline-role-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .timeline-role {
+    padding-left: 0;
+  }
+
+  .timeline-meta {
+    white-space: normal;
   }
 }
